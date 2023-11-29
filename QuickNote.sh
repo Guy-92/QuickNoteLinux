@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 #Add the path to the inbox file below
-inbox_file=""
+inbox_file="path/to/inbox/file"
 
 #Choose dialog application
 #dialog_application=zenity
