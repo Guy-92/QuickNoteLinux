@@ -3,6 +3,10 @@ A way to take quick notes in Obsidian on Linux
 
 This project is a way to take quick notes in Linux. By default, it uses Kdialog, but Zenity can be used instead.
 
+## Requirements
+
+The script needs either Zenity or Kdialog installed on the system
+
 
 ## Configuration:
 
