@@ -5,8 +5,7 @@ This project is a way to take quick notes in Linux. By default, it uses Kdialog,
 
 ## Requirements
 
-The script needs either Zenity or Kdialog installed on the system
-
+The script needs Zenity installed on the system, and optionally Kdialog if you want to use Kdialog for adding a note.
 
 ## Configuration:
 
