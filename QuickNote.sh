@@ -16,7 +16,11 @@ if [ -z "${inbox_file}" ]; then
   exit 1
 fi
 
-if [ "$dialog_application" == "zenity" ]; then
+if [ "$dialog_application" == "kdialog" ]; then
+  if ! input=$(kdialog --title 'Add Note' --textinputbox "'ctrl+enter' to submit, '-' to start with bullet point, and 'esc' to close without saving"); then
+    exit
+  fi
+elif [ "$dialog_application" == "zenity" ]; then
   if [ "$zenity_multiline" == "yes" ];then
     if ! input=$(zenity --text-info --editable --title="Add Note" --text="'-' to start with a bullet point, 'esc' to close without saving"); then
       exit
@@ -25,10 +29,6 @@ if [ "$dialog_application" == "zenity" ]; then
     if ! input=$(zenity --entry --title="Add Note" --text="'-' to start with a bullet point, 'esc' to close without saving, enter to submit"); then
       exit
     fi
-  fi
-elif [ "$dialog_application" == "kdialog" ]; then
-  if ! input=$(kdialog --title 'Add Note' --textinputbox "'ctrl+enter' to submit, '-' to start with bullet point, and 'esc' to close without saving"); then
-    exit
   fi
 fi
 
